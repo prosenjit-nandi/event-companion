@@ -9,7 +9,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg'],
+      includeAssets: ['favicon-32.png', 'apple-touch-icon.png', 'nabc-logo.png'],
       manifest: {
         name: 'NABC 2026 Companion',
         short_name: 'NABC 2026',
@@ -18,11 +18,10 @@ export default defineConfig({
         scope: '/nabc-2026-companion/',
         display: 'standalone',
         background_color: '#fff7e8',
-        theme_color: '#071a3d',
+        theme_color: '#116466',
         icons: [
           { src: 'pwa-192.png', sizes: '192x192', type: 'image/png' },
           { src: 'pwa-512.png', sizes: '512x512', type: 'image/png' },
-          { src: 'pwa-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
         ],
       },
       workbox: {

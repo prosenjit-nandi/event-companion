@@ -48,13 +48,21 @@ function TopBar() {
   return (
     <AppBar position="sticky" elevation={0}>
       <Toolbar sx={{ justifyContent: 'space-between', gap: 2 }}>
-        <Box>
-          <Typography variant="subtitle1" sx={{ fontWeight: 800, lineHeight: 1.15 }}>
-            NABC 2026
-          </Typography>
-          <Typography variant="caption" sx={{ opacity: 0.8 }}>
-            Synced {formatRelative(lastUpdated)}
-          </Typography>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.25 }}>
+          <Box
+            component="img"
+            src={`${import.meta.env.BASE_URL}nabc-logo.png`}
+            alt=""
+            sx={{ width: 34, height: 34, borderRadius: '8px' }}
+          />
+          <Box>
+            <Typography variant="subtitle1" sx={{ fontWeight: 800, lineHeight: 1.15 }}>
+              NABC 2026
+            </Typography>
+            <Typography variant="caption" sx={{ opacity: 0.8 }}>
+              Synced {formatRelative(lastUpdated)}
+            </Typography>
+          </Box>
         </Box>
         <Typography variant="h6" sx={{ fontWeight: 800 }}>
           {now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}

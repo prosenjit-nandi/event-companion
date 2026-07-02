@@ -1,10 +1,10 @@
 import { createTheme } from '@mui/material/styles'
 import type { PaletteMode } from '@mui/material'
 
-// Palette lifted from nabcapp.com's own schedule page for visual continuity.
-const NAVY = '#071a3d'
-const BLUE = '#124c8b'
-const GOLD = '#f3c15f'
+// Palette sampled directly from the official NABC 2026 event logo (public/nabc-logo.png).
+const TEAL = '#116466'
+const TEAL_DARK = '#0a4547'
+const PEACH = '#ffcb9a'
 const CREAM = '#fff7e8'
 
 export function createAppTheme(mode: PaletteMode) {
@@ -12,13 +12,13 @@ export function createAppTheme(mode: PaletteMode) {
   return createTheme({
     palette: {
       mode,
-      primary: { main: isDark ? GOLD : NAVY, contrastText: isDark ? NAVY : '#fff' },
-      secondary: { main: BLUE },
+      primary: { main: isDark ? PEACH : TEAL, contrastText: isDark ? TEAL_DARK : '#fff' },
+      secondary: { main: TEAL_DARK },
       background: {
-        default: isDark ? '#0b1120' : CREAM,
-        paper: isDark ? '#111a2e' : '#ffffff',
+        default: isDark ? '#0b1615' : CREAM,
+        paper: isDark ? '#12201f' : '#ffffff',
       },
-      warning: { main: GOLD },
+      warning: { main: PEACH },
     },
     shape: { borderRadius: 14 },
     typography: {
@@ -31,7 +31,7 @@ export function createAppTheme(mode: PaletteMode) {
       MuiAppBar: {
         defaultProps: { color: 'default' },
         styleOverrides: {
-          root: { backgroundColor: isDark ? '#111a2e' : NAVY, color: '#fff' },
+          root: { backgroundColor: isDark ? '#12201f' : TEAL, color: '#fff' },
         },
       },
       MuiPaper: {
